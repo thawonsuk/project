@@ -18,7 +18,7 @@
         <div class="col-md-6">
             {!! Form::open(['action' => 'CategorieController@store','method'=>'POST']) !!}
     <div class="form-group">
-        <?=Form::label('เพิ่มประเภทครุภัณฑ์');?>
+            <?=Form::label('เพิ่มประเภทครุภัณฑ์');?>
             <?=Form::text('name',null,['class' => 'form-control',]);?>
     </div>
     <input type="submit" value="บันทึก" class="btn btn-primary">

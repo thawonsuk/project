@@ -9,10 +9,8 @@
         <div class="card">
           <div class="card-header">
           <h1 class="m-0 text-dark">ประเภทครุภัณฑ์</h1>
-
-
           <div class="card-header h4">
-              <?= link_to('categorie/create',$title = 'เพิ่มข้อมูล',['class'=>'btn btn-primary'], $sucue = null); ?>
+              <?= link_to('categorie/create',$title = 'เพิ่มข้อมูล',['class'=>'btn btn-success'], $sucue = null); ?>
                     <div class="card-tools">
                         <div class="input-group input-group-sm" style="width: 150px;">
                           <input type="text" name="table_search" class="form-control float-right" placeholder="Search">

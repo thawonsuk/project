@@ -37,7 +37,7 @@
                     <td>{{ $row->email }}</td>
                     <td>{{ $row->usertype  }}</td>
                     <td>
-                        <a href="/role-edit/{{ $row->id }}" class="btn btn-success">EDIT</a>
+                        <a href="/role-edit/{{ $row->id }}" class="btn btn-warning">แก้ไข</a>
                     </td>
                     <td>
                         <form action="/role-delete/{{ $row->id }}" method="post">

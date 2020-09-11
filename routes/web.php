@@ -27,7 +27,6 @@ Route::delete('/role-delete/{id}','Admin\DashboardController@registerdelete');
 
 Route::get('categorie','CategorieController@index')->name('categorie');
 Route::get('categorie/destroy/{id}','CategorieController@destroy');
-
 Route::resource('categorie','CategorieController');
 
 Route::get('item/destroy/{id}','ItemController@destroy');
