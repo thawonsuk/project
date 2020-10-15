@@ -27,34 +27,10 @@
                   <th scope="col">หน่วยนับ</th>
                   <th scope="col">สถานะ</th>
                   <th scope="col">รูปภาพ</th>
-                  <th scope="col">แก้ไข</th>
                   <th scope="col">ลบ</th>
               </tr>
             </thead>
-            @foreach ($item as $items )
-            <tbody>
-            <tr>
-                <td>{{ $items->name }}</td>
-                <td>{{ $items->idname }}</td>
-                <td>{{ $items->categories->name }}</td>
-                <td>{{ number_format($items->price,2) }}</td>
-                <td>{{ $items->typename }}</td>
-                <td>{{ $items->id_status }}</td>
-                <td>
-                <a href="{{ asset('images/'.$items->image) }}">
-                <img src="{{ asset('images/resize/'.$items->image)}}"style="width:50px"></a>
-            </td>
-                <td>
-                    <a href="{{ route('item.edit',$items->id) }}" class="btn btn-sm btn-warning"><i class="fa fa-edit"></i></a>
-                </td>
-                <td>
-                    <?= Form::open(array('url' =>'item/'.$items->id,'method'=>'delete','onsubmit'=>'return confirm("ต้องการลบข้อมูล");'))?>
-                    <button type="submit" class="btn btn-sm btn-danger "><i class="fa fa-trash"></i></button>
-                    {!! Form::close() !!}
-                </td>
-            </tr>
-        </tbody>
-            @endforeach
+
         </table>
 
                 </div>

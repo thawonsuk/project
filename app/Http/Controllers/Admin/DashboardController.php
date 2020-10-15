@@ -8,9 +8,19 @@ use Illuminate\Http\Request;
 
 class DashboardController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('admin');
+    }
+
     public function registered(){
         $users = User::all();
         return view('admin.register')->with('users',$users);
+    }
+
+    public function registercreate($id){
+        $users = User::find($id);
+        return view('admin.register-create')->with('users', $users);
     }
 
     public function registeredit(Request $request, $id)

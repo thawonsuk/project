@@ -18,11 +18,9 @@ Route::get('/', function () {
 });
 
 Route::get('/role-register', 'Admin\DashboardController@registered');
-
+Route::get('/role-create/{id}','Admin\DashboardController@registercreate');
 Route::get('/role-edit/{id}','Admin\DashboardController@registeredit');
-
 Route::put('/role-register-update/{id}','Admin\DashboardController@registerupdate');
-
 Route::delete('/role-delete/{id}','Admin\DashboardController@registerdelete');
 
 Route::get('categorie','CategorieController@index')->name('categorie');
@@ -32,8 +30,10 @@ Route::resource('categorie','CategorieController');
 Route::get('item/destroy/{id}','ItemController@destroy');
 Route::resource('item', 'ItemController');
 
-Auth::routes();
 
+Route::get('/borrow','BorrowController@index');
+
+Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 

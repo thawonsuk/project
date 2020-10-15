@@ -14,12 +14,11 @@
               {{ session('status') }}
           </div>
           @endif
-          <div class="card-tools">
-          </div>
+          <div class="card-body">
+            <div class="card-header h4">
+            <?= link_to('admin/create',$title = 'เพิ่มข้อมูลผู้ใช้',['class'=>'btn btn-primary'], $sucue = null); ?>
         </div>
-
-  <div class="card-body table-responsive p-0" style="height: 300px;">
-    <table class="table table-head-fixed text-nowrap">
+    <table id="example2" class="table table-bordered table-hover">
         <thead>
                 <th>ID</th>
                 <th>ชื่อ</th>
@@ -54,6 +53,6 @@
                     </div>
                         </div>
                             </div>
-
+                        </div>
 
 @endsection

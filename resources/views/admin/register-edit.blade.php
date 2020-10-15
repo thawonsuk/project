@@ -20,20 +20,22 @@
                     {{ csrf_field()}}
                     {{ method_field('PUT') }}
                     <div class="form-group">
-                        <label>Name</label>
+                        <label>ชื่อผู้ใช้งาน</label>
                         <input type="text" name="username" value="{{ $users->name }}" class="form-control">
                     </div>
                     <div class="form-group">
-                        <label>Give Role</label>
+                        <label>สถานะ</label>
                         <select name="usertype" class="form-control">
+                            <option selected disabled>เลือกสถานะ</option>
                             <option value="admin">Admin</option>
-                            <option value="vendor">Vendor</option>
+                            <option value="member">Member</option>
                             <option value="">None</option>
                         </select>
                     </div>
-                    <button type="submit" class="btn btn-success"> Update </button>
-                    <a href="/role-register"  class="btn btn-danger"> Cancel </a>
-
+                    <div class="card-body">
+                    <button type="submit" class="btn btn-success swalDefaultSuccess">Update</button>
+                    <a href="/role-register"  class="btn btn-danger">Cancel</a>
+                    </div>
                 </form>
             </div>
         </div>

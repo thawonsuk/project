@@ -25,7 +25,18 @@
   <!-- summernote -->
   <link rel="stylesheet" href="{{ asset('plugins/summernote/summernote-bs4.css')}}">
   <!-- Google Font: Source Sans Pro -->
-  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Prompt&display=swap" rel="stylesheet">
+
+  <style>
+    html, body {
+        background-color: #fff;
+        color: #636b6f;
+        font-family: 'Prompt', sans-serif;
+        font-weight: 200;
+        height: 100vh;
+        margin: 0;
+    }
+    </style>
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
@@ -66,9 +77,8 @@
                 <a class="dropdown-item" href="{{ route('logout') }}"
                    onclick="event.preventDefault();
                                  document.getElementById('logout-form').submit();">
-                    {{ __('Logout') }}
+                    {{ __('ออกจากระบบ') }}
                 </a>
-
                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                     @csrf
                 </form>
@@ -133,25 +143,7 @@
                     </a>
                 </li>
                 <li class="nav-item has-treeview">
-                    <a href="#" class="nav-link">
-                      <i class="nav-icon fas fa-copy"></i>
-                      <p>
-                        จัดการคลังครุภัณฑ์
-                        <span class="badge badge-info right"></span>
-                      </p>
-                    </a>
-                </li>
-                <li class="nav-item has-treeview">
-                    <a href="#" class="nav-link">
-                      <i class="nav-icon fas fa-copy"></i>
-                      <p>
-                        รับครุภัณฑ์เข้าคลัง
-                        <span class="badge badge-info right"></span>
-                      </p>
-                    </a>
-                </li>
-                <li class="nav-item has-treeview">
-                    <a href="#" class="nav-link">
+                    <a href="borrow" class="nav-link">
                       <i class="nav-icon fas fa-copy"></i>
                       <p>
                         ทำรายการยืมครุภัณฑ์
@@ -234,5 +226,10 @@
 <script src="{{ asset('dist/js/pages/dashboard.js')}}"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="{{ asset('dist/js/demo.js')}}"></script>
+
+
+
+
+
 </body>
 </html>
